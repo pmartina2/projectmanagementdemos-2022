@@ -43,8 +43,79 @@
   </div>
   <div class="b-example-divider"></div>
   
+  <button><h2><a href="https://projects.zoho.com/portal/anomalysquared">Enter Portal Here</a></h2></button>
   
+  <button><h2><a href="https://anomalysquared.proofhub.com/link/form?token=36b38bedbd1e783836b51060cd9d829903fecce6">View Request Form</a></h2></button>
+
+
+<h2>Agent Support Form</h2>
   
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<div id="ph-form-alert"></div>
+<div class="ph-form-wrapper">
+        <form id="requestForm" action="https://anomalysquared.proofhub.com/link/form?token=36b38bedbd1e783836b51060cd9d829903fecce6&_dc=1646238851267&ft=ctf" method="POST" class="needs-validation" autocomplete="off" enctype = "multipart/form-data" onsubmit="disabled_btn()">
+        <table class="" width="100%" cellpadding="0" cellspacing="0" border="0">
+            <!-- REQUIRED | Do not change -->
+            <tr>
+                <td colspan="2"><label>Name*:</label></td>					
+            </tr>
+            <tr>
+                <td colspan="2"><input class="form-control" type="text" name="ph-field-name" required /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><label>Email*:</label></td>					
+            </tr>
+            <tr>
+                <td colspan="2"><input class="form-control" type="email" name="ph-field-email" required /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><label>Request title*:</label></td>					
+            </tr>
+            <tr>
+                <td colspan="2"><input class="form-control" type="text" name="ph-field-task[title]" required /></td>
+            </tr>
+            <!-- // REQUIRED | Do not change -->
+            <tr>
+                <td colspan="2"><label>Description:</label></td>
+            </tr>
+            <tr>
+                <td colspan="2"><textarea class="form-control" name="ph-field-task[description]" rows="6"></textarea></td>
+            </tr>
+            <tr>
+                <td><label>Starts on:</label></td>	
+                <td><label>Ends on:</label></td>				
+            </tr>
+            <tr>
+                <td><input type="date" class="form-control" name="ph-field-task[start_date]" /></td>
+                <td><input type="date" class="form-control" name="ph-field-task[due_date]" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="file" name="files[]" id="fileToUpload" multiple></td>
+            </tr>
+            <!-- Extra params -->
+            <!--tr>
+                <td colspan="2"><label>Job id:</label></td>				
+            </tr>
+            <tr>
+                <td colspan="2"><input class="form-control" type="text" name="ph-field-extras[Job-id]" /></td>
+            </tr-->
+            
+            <!-- // Extra params -->
+        </table>
+        <br />
+        <!-- Custom thank you page -->
+        <input type="hidden" name="thankyou" value="" />
+        <!-- // Custom thank you page -->
+        <button class="btn btn-primary btn-md" onclick="showSpinner(this)" type="submit" value="Submit" id="submit_btn"><span id="form_spinner" class="d-none spinner-border"></span>Submit</button>
+    </form>
+</div>
+<script>
+    function showSpinner(ele) {if (document.getElementById('requestForm').checkValidity() ==!0) {document.getElementById('requestForm').submit();ele.disabled = true;document.getElementById('form_spinner').classList.remove('d-none');};}
+    function a(c){return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]"+encodeURIComponent(c).replace(/[\.\+\*]/g,"\\$&")+"(?:\\=([^&]*))?)?.*$","i"),"$1"))}var b=document.getElementById("ph-form-alert");""!=a("error")?(b.innerHTML=a("error"),b.classList.add("alert"),b.classList.add("alert-danger")):""!=a("success")&&(b.classList.add("alert"),b.innerHTML=a("success"),b.classList.add("alert-success"));</script>
+
   
   
   
